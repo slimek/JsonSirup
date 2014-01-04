@@ -77,7 +77,6 @@ bool JsonValue::IsConvertibleToString() const { return m_node->IsConvertibleToSt
 
 std::string JsonValue::AsString() const
 {
-    assert( m_node->IsConvertibleToString() );
     return m_node->AsString();
 }
 
@@ -141,8 +140,10 @@ bool JsonNumber::IsConvertibleToUint32() const
 std::string JsonNumber::AsString() const
 {
     std::ostringstream stream;
+    stream << m_value;    
     return stream.str();
 }
+
 
 ///////////////////////////////////////////////////////////////////////////////
 

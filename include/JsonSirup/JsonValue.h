@@ -12,8 +12,6 @@
 namespace JsonSirup
 {
 
-/** \brief Type of the value held by a JsonValue object.
- */
 enum ValueType : int
 {
     VALUE_NULL    = 0,  ///< 'null' value
@@ -25,8 +23,6 @@ enum ValueType : int
 };
 
 
-/** \brief Represents a <a HREF="http://www.json.org">JSON</a> value.
- */
 class JsonValue
 {
 public:

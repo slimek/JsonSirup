@@ -87,4 +87,54 @@ TEST( JsonValueCopyMoveTest )
 }
 
 
+TEST( JsonValueAsStringTest )
+{
+    /// Null - Can't be string ///
+
+    JsonValue jnull;
+
+    CHECK_THROW( jnull.AsString(), std::logic_error );
+
+
+    /// Boolean ///
+
+    JsonValue jtrue( true );
+    JsonValue jfalse( false );
+
+    CHECK( "true"  == jtrue.AsString() );
+    CHECK( "false" == jfalse.AsString() );
+
+
+    /// Number - Integers ///
+
+    JsonValue jzero( 0 );
+    JsonValue jneg1( -1 );
+    JsonValue jansw( 42 );
+
+    CHECK( "0" == jzero.AsString() );
+    CHECK( "-1" == jneg1.AsString() );
+    CHECK( "42" == jansw.AsString() );
+
+
+    /// Number - Floatings ///
+
+    JsonValue jpi( 3.14 );
+    JsonValue jmolar( 6.022e23 );
+
+    const auto s = jmolar.AsString();
+
+    CHECK( "3.14" == jpi.AsString() );
+    CHECK( "6.022e+023" == jmolar.AsString() );
+
+
+    /// Strings ///
+
+    JsonValue jempty( "" );
+    JsonValue jalice( "Alice" );
+
+    CHECK( "" == jempty.AsString() );
+    CHECK( "Alice" == jalice.AsString() );
+}
+
+
 } // SUITE( JsonValueSuite )
