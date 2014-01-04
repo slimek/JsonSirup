@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Windows Desktop
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JsonSirupTest_vc11", "JsonSirupTest_vc11.vcxproj", "{9D9DE739-11EB-4193-AE2E-D5E907171DD1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JsonSirup_vc11", "..\..\proj.win32\JsonSirup_vc11.vcxproj", "{5AC6EEDA-15DF-4F7B-86C9-7D8CC1C0181D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9D9DE739-11EB-4193-AE2E-D5E907171DD1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9D9DE739-11EB-4193-AE2E-D5E907171DD1}.Debug|Win32.Build.0 = Debug|Win32
+		{9D9DE739-11EB-4193-AE2E-D5E907171DD1}.Release|Win32.ActiveCfg = Release|Win32
+		{9D9DE739-11EB-4193-AE2E-D5E907171DD1}.Release|Win32.Build.0 = Release|Win32
+		{5AC6EEDA-15DF-4F7B-86C9-7D8CC1C0181D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5AC6EEDA-15DF-4F7B-86C9-7D8CC1C0181D}.Debug|Win32.Build.0 = Debug|Win32
+		{5AC6EEDA-15DF-4F7B-86C9-7D8CC1C0181D}.Release|Win32.ActiveCfg = Release|Win32
+		{5AC6EEDA-15DF-4F7B-86C9-7D8CC1C0181D}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
