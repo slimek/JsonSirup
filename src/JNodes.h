@@ -1,11 +1,11 @@
 // JsonSirup C++ JSON Library - JSON Nodes Header
 
-#ifndef __JSON_SIRUP_JSON_NODES_H
-#define __JSON_SIRUP_JSON_NODES_H
+#ifndef __JSON_SIRUP_JNODES_H
+#define __JSON_SIRUP_JNODES_H
 #pragma once
 
 #include <JsonSirup/Forwards.h>
-#include <JsonSirup/JsonValue.h>
+#include <JsonSirup/JValue.h>
 
 
 namespace JsonSirup
@@ -17,16 +17,16 @@ namespace JsonSirup
 // - Abstract base class of all node types
 //
 
-class JsonNode
+class JNode
 {
 public:
 
-    virtual ~JsonNode() {}
+    virtual ~JNode() {}
 
 
     /// Properties ///
 
-    virtual ValueType Type() const = 0;
+    virtual JTokenType Type() const = 0;
 
     virtual bool IsConvertibleToInt32()  const { return false; }
     virtual bool IsConvertibleToUint32() const { return false; }
@@ -41,16 +41,16 @@ public:
 
 ///////////////////////////////////////////////////////////////////////////////
 //
-// JSON Null
+// JSON Null Node
 //
 
-class JsonNull : public JsonNode
+class JNullNode : public JNode
 {
 public:
 
     /// Properties ///    
 
-    ValueType Type() const override { return VALUE_NULL; }
+    JTokenType Type() const override { return JTOKEN_NULL; }
 
 
     /// Accessors ///
@@ -64,18 +64,18 @@ public:
 // JSON Boolean
 //
 
-class JsonBoolean : public JsonNode
+class JBoolNode : public JNode
 {
 public:
 
-    explicit JsonBoolean( bool value )
+    explicit JBoolNode( bool value )
         : m_value( value )
     {}
 
 
     /// Properties ///
 
-    ValueType Type() const override { return VALUE_BOOLEAN; }
+    JTokenType Type() const override { return JTOKEN_BOOL; }
 
     bool IsConvertibleToInt32()  const override { return true; }
     bool IsConvertibleToUint32() const override { return true; }
@@ -98,18 +98,18 @@ private:
 // JSON Number
 //
 
-class JsonNumber : public JsonNode
+class JNumberNode : public JNode
 {
 public:
 
-    explicit JsonNumber( double value )
+    explicit JNumberNode( double value )
         : m_value( value )
     {}
 
 
     /// Properties ///
 
-    ValueType Type() const override { return VALUE_NUMBER; }
+    JTokenType Type() const override { return JTOKEN_NUMBER; }
 
     bool IsConvertibleToInt32()  const override;
     bool IsConvertibleToUint32() const override;
@@ -133,22 +133,22 @@ private:
 // JSON String
 //
 
-class JsonString : public JsonNode
+class JStringNode : public JNode
 {
 public:
 
-    explicit JsonString( const std::string& value )
+    explicit JStringNode( const std::string& value )
         : m_value( value )
     {}
 
-    explicit JsonString( std::string&& value )
-        : m_value( value )
+    explicit JStringNode( std::string&& value )
+        : m_value( std::move( value ))
     {}
 
 
     /// Properties ///
 
-    ValueType Type() const override { return VALUE_STRING; }
+    JTokenType Type() const override { return JTOKEN_STRING; }
 
     bool IsConvertibleToString() const override { return true; }
 
@@ -168,4 +168,4 @@ private:
 
 } // namespace JsonSirup
 
-#endif // __JSON_SIRUP_JSON_NODES_H
+#endif // __JSON_SIRUP_JNODES_H

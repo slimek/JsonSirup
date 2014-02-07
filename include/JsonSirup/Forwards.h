@@ -10,11 +10,15 @@ namespace JsonSirup
 // Fundemantal types
 typedef unsigned int uint;
 
+// JToken.h
+enum JTokenType : int;
+class JToken;
+
 // JsonValue.h
-enum ValueType : int;
-class JsonValue;
+class JValue;
 
 // JsonValue internal types
+class JNode;
 class JsonNode;
 
 

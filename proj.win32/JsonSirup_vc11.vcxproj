@@ -12,11 +12,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\JsonSirup\Forwards.h" />
-    <ClInclude Include="..\include\JsonSirup\JsonValue.h" />
-    <ClInclude Include="..\src\JsonNodes.h" />
+    <ClInclude Include="..\include\JsonSirup\JValue.h" />
+    <ClInclude Include="..\include\JsonSirup\JToken.h" />
+    <ClInclude Include="..\src\JNodes.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\JsonValue.cpp" />
+    <ClCompile Include="..\src\JValue.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{5AC6EEDA-15DF-4F7B-86C9-7D8CC1C0181D}</ProjectGuid>

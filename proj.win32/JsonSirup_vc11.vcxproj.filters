@@ -11,18 +11,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\include\JsonSirup\JsonValue.h">
-      <Filter>1. Public Headers</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\JsonSirup\Forwards.h">
       <Filter>1. Public Headers</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\JsonNodes.h">
+    <ClInclude Include="..\include\JsonSirup\JToken.h">
+      <Filter>1. Public Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\JsonSirup\JValue.h">
+      <Filter>1. Public Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\JNodes.h">
       <Filter>2. Sources</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\JsonValue.cpp">
+    <ClCompile Include="..\src\JValue.cpp">
       <Filter>2. Sources</Filter>
     </ClCompile>
   </ItemGroup>
