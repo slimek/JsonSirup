@@ -23,6 +23,7 @@
     <ProjectGuid>{5AC6EEDA-15DF-4F7B-86C9-7D8CC1C0181D}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>JsonSirup_vc11</RootNamespace>
+    <ProjectName>JsonSirup</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
